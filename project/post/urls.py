@@ -4,13 +4,13 @@ from rest_framework import routers
 
 app_name="post"
 
-default_router = routers.SimpleRouter(trailing_slash=False)
+default_router = routers.SimpleRouter()
 default_router.register("posts", PostViewSet, basename="posts")
 
-comment_router = routers.SimpleRouter(trailing_slash=False)
+comment_router = routers.SimpleRouter()
 comment_router.register("comments", CommentViewSet, basename="comments")
 
-post_comment_router = routers.SimpleRouter(trailing_slash=False)
+post_comment_router = routers.SimpleRouter()
 post_comment_router.register("comments", PostCommentViewSet, basename="comments")
 
 urlpatterns = [
